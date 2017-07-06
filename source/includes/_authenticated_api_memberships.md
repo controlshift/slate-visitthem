@@ -88,6 +88,10 @@ Members of Congress are represented by memberships.  A membership record include
 
 Find all memberships for a given area.
 
+If provided area code references a State, it returns members of the Senate for that State; if instead it is a Congressional District code, the member of the House of Representatives will be returned.
+
+### HTTP Request
+
 `GET /api/v1/memberships/for_area/<area abbreviation>`
 
 Where `<area abbreviation>` is a State abbreviation (e.g.: NY, CA) or a Congressional District abbreviation (e.g.: IL-1, NJ-2).
@@ -181,7 +185,11 @@ Where `<area abbreviation>` is a State abbreviation (e.g.: NY, CA) or a Congress
 }
 ```
 
-> JSON response also includes the `distance` field for offices and events, with the distance measured in miles to the geographic point provided on the request.
+Find all memberships from both chambers for a given area.
+
+All offices and events for memberships are returned, no filtering by closeness is applied.
+
+### HTTP Request
 
 `GET /api/v1/memberships/local?longitude=<longitude>&latitude=<latitude>&region=<region>&country=<country>`
 
@@ -191,3 +199,5 @@ Where:
 * `<latitude>` is the latitude expressed in decimal degrees (e.g.: 45.4546)
 * `<region>` is the state abbreviation (e.g.: OR)
 * `<country>` is the ISO 3166-1 country abbreviation (e.g.: US)
+
+<aside class="notice">JSON response also includes the `distance` field for offices and events, with the distance measured in miles to the geographic point provided on the request.</aside>

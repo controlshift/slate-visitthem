@@ -1,6 +1,6 @@
 # People
 
-
+A person record references an individual, who may be associated with multiple memberships (with only one of them being current).
 
 ## Lookup by external ID
 
@@ -65,6 +65,12 @@
   ]
 }
 ```
+
+Find a person by an external ID.
+
+Memberships are ordered from most to less recent.
+
+### HTTP Request
 
 `GET /api/v1/people/find/<search_field>/<search_value>`
 
