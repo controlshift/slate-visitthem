@@ -90,7 +90,7 @@ Find all memberships for a given area.
 
 `GET /api/v1/memberships/for_area/<area abbreviation>`
 
-Where `<area abbreviation>` is a State abbreviation (i.e.: NY, CA) or a Congressional District abbreviation (i.e.: IL-1, NJ-2).
+Where `<area abbreviation>` is a State abbreviation (e.g.: NY, CA) or a Congressional District abbreviation (e.g.: IL-1, NJ-2).
 
 ## Find by proximity to a geographical point
 
@@ -187,7 +187,7 @@ Where `<area abbreviation>` is a State abbreviation (i.e.: NY, CA) or a Congress
 
 Where:
 
-* `<longitude>` is the longitude expressed in decimal degrees (i.e.: -122.2134)
-* `<latitude>` is the latitude expressed in decimal degrees (i.e.: 45.4546)
-* `<region>` is the state abbreviation (i.e.: OR)
-* `<country>` is the ISO 3166-1 country abbreviation (i.e.: US)
+* `<longitude>` is the longitude expressed in decimal degrees (e.g.: -122.2134)
+* `<latitude>` is the latitude expressed in decimal degrees (e.g.: 45.4546)
+* `<region>` is the state abbreviation (e.g.: OR)
+* `<country>` is the ISO 3166-1 country abbreviation (e.g.: US)
