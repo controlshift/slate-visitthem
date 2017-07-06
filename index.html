@@ -247,7 +247,7 @@
 
           <h1 id="memberships">Memberships</h1>
 
-<p>Members of the congress are represented on memberships. A membership record includes specific fields for faction, chamber, district, etc.; as well as personal information of the legislator, offices and upcoming events.</p>
+<p>Members of Congress are represented by memberships.  A membership record includes specific fields for faction, chamber, district, etc.; as well as personal information about the legislator, offices, and upcoming events.</p>
 
 <h2 id="find-by-area">Find by area</h2>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -332,9 +332,13 @@
 </span></code></pre>
 <p>Find all memberships for a given area.</p>
 
+<p>If provided area code references a State, it returns members of the Senate for that State; if instead it is a Congressional District code, the member of the House of Representatives will be returned.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">GET /api/v1/memberships/for_area/&lt;area abbreviation&gt;</code></p>
 
-<p>Where <code class="prettyprint">&lt;area abbreviation&gt;</code> is a State abbreviation (i.e.: NY, CA) or a Congressional District abbreviation (i.e.: IL-1, NJ-2).</p>
+<p>Where <code class="prettyprint">&lt;area abbreviation&gt;</code> is a State abbreviation (e.g.: NY, CA) or a Congressional District abbreviation (e.g.: IL-1, NJ-2).</p>
 
 <h2 id="find-by-proximity-to-a-geographical-point">Find by proximity to a geographical point</h2>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -422,22 +426,28 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<blockquote>
-<p>JSON response also includes the <code class="prettyprint">distance</code> field for offices and events, with the distance measured in miles to the geographic point provided on the request.</p>
-</blockquote>
+<p>Find all memberships from both chambers for a given area.</p>
+
+<p>All offices and events for memberships are returned, no filtering by closeness is applied.</p>
+
+<h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">GET /api/v1/memberships/local?longitude=&lt;longitude&gt;&amp;latitude=&lt;latitude&gt;&amp;region=&lt;region&gt;&amp;country=&lt;country&gt;</code></p>
 
 <p>Where:</p>
 
 <ul>
-<li><code class="prettyprint">&lt;longitude&gt;</code> is the longitude expressed in decimal degrees (i.e.: -122.2134)</li>
-<li><code class="prettyprint">&lt;latitude&gt;</code> is the latitude expressed in decimal degrees (i.e.: 45.4546)</li>
-<li><code class="prettyprint">&lt;region&gt;</code> is the state abbreviation (i.e.: OR)</li>
-<li><code class="prettyprint">&lt;country&gt;</code> is the ISO 3166-1 country abbreviation (i.e.: US)</li>
+<li><code class="prettyprint">&lt;longitude&gt;</code> is the longitude expressed in decimal degrees (e.g.: -122.2134)</li>
+<li><code class="prettyprint">&lt;latitude&gt;</code> is the latitude expressed in decimal degrees (e.g.: 45.4546)</li>
+<li><code class="prettyprint">&lt;region&gt;</code> is the state abbreviation (e.g.: OR)</li>
+<li><code class="prettyprint">&lt;country&gt;</code> is the ISO 3166-1 country abbreviation (e.g.: US)</li>
 </ul>
 
+<aside class="notice">JSON response also includes the `distance` field for offices and events, with the distance measured in miles to the geographic point provided on the request.</aside>
+
           <h1 id="people">People</h1>
+
+<p>A person record references an individual, who may be associated with multiple memberships (with only one of them being current).</p>
 
 <h2 id="lookup-by-external-id">Lookup by external ID</h2>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -500,6 +510,12 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
+<p>Find a person by an external ID.</p>
+
+<p>Memberships are ordered from most to less recent.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">GET /api/v1/people/find/&lt;search_field&gt;/&lt;search_value&gt;</code></p>
 
 <p>Where:</p>
