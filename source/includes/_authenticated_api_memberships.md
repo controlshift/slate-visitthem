@@ -1,6 +1,6 @@
 # Memberships
 
-Members of the congress are represented on memberships. A membership record includes specific fields for faction, chamber, district, etc.; as well as personal information of the legislator, offices and upcoming events.
+Members of Congress are represented by memberships.  A membership record includes specific fields for faction, chamber, district, etc.; as well as personal information about the legislator, offices, and upcoming events.
 
 ## Find by area
 
