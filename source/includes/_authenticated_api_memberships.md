@@ -187,7 +187,9 @@ Where `<area abbreviation>` is a State abbreviation (e.g.: NY, CA) or a Congress
 
 Find all memberships from both chambers for a given area.
 
-All offices and events for memberships are returned, no filtering by closeness is applied.
+All offices and upcoming events for memberships are returned; no filtering by closeness is applied.
+Offices are sorted by distance from the searched point, with the closest office first.
+Events are sorted by start time, with the soonest event first.
 
 ### HTTP Request
 
