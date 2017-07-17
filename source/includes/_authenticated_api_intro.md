@@ -3,7 +3,7 @@
 > Example using cUrl for authenticated API request assuming your API token is `abcdef1234567890abcdef1234567890`:
 
 ```bash
-curl --user 'abcdef1234567890abcdef1234567890:' 'https://www.visitthem.org/api/v1/memberships/for_area/NY-1'
+curl --user 'abcdef1234567890abcdef1234567890:' 'https://yourdomain.visitthem.org/api/v1/memberships/for_area/NY-1'
 ```
 
 > Note the colon character at the end of the user credentials argument for specifying a blank password.
