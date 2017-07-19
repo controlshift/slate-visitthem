@@ -92,7 +92,7 @@ If provided area code references a State, it returns members of the Senate for t
 
 ### HTTP Request
 
-`GET /api/v1/memberships/for_area/<area abbreviation>`
+`GET /api/v1/memberships/for_area/<area abbreviation>.json`
 
 Where `<area abbreviation>` is a State abbreviation (e.g.: NY, CA) or a Congressional District abbreviation (e.g.: IL-1, NJ-2).
 
@@ -193,7 +193,7 @@ Events are sorted by start time, with the soonest event first.
 
 ### HTTP Request
 
-`GET /api/v1/memberships/local?longitude=<longitude>&latitude=<latitude>&region=<region>&country=<country>`
+`GET /api/v1/memberships/local?longitude=<longitude>&latitude=<latitude>&region=<region>&country=<country>.json`
 
 Where:
 
