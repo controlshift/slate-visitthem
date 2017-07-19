@@ -72,7 +72,7 @@ Memberships are ordered from most to less recent.
 
 ### HTTP Request
 
-`GET /api/v1/people/find/<search_field>/<search_value>`
+`GET /api/v1/people/find/<search_field>/<search_value>.json`
 
 Where:
 
