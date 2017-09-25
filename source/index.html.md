@@ -6,7 +6,7 @@ title: VisitThem API Reference
 #  - js
 
 toc_footers:
-  - <a href='https://www.visitthem.org'>Sign Up for VisitThem.org</a>
+  - <a href='https://www.visitthem.org/'>Sign Up for VisitThem.org</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
